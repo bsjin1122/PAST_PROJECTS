@@ -1,0 +1,28 @@
+/* reset */
+*{margin:0; padding:0;}
+
+/* 전체 레이아웃 */
+#wrap{font-size: 30px; color:#fff; text-align: center; text-transform: uppercase;}
+#header{height: 140px; }
+#banner{line-height: 450px; height:450px;background: #4dd0e1;}
+#contents{height: 950px;}
+#footer{height: 220px;}
+
+
+/* layout */
+#header-top{line-height: 70px; height: 70px; background: #b2ebf2;}
+#header-nav{line-height: 70px;height: 70px; background: #80deea;}
+#content1{line-height: 90px;height: 90px;background: #26c6da;}
+#content2{line-height: 480px;height: 480px;background: #00bcd4;}
+#content3{line-height: 380px;height: 380px;background: #00acc1;}
+#footer-nav{line-height: 60px;height: 60px;background: #0097a7;}
+#footer-info{line-height: 160px;height: 160px; background: #00838f;}
+
+
+
+/* container */
+.container{width: 1100px;margin: 0 auto; height: inherit; background: rgba(0,0,0,0.3);}
+
+
+/* 전체에 width:100% 지웠음, height값 하위에 있으면 상위는 지워도 됨 */
+/* line-height 영역을 잡기 위해서 쓰는 것일 뿐, 실제로는 쓰지 않음 */

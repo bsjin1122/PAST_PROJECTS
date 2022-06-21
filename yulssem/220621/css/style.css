@@ -1,0 +1,15 @@
+/* reset */
+* { margin:0; padding:0; }
+ul{list-style:none ;}
+a{color:inherit; text-decoration: none;}
+img{border:0;vertical-align: top;}
+.clearfix::after{content:'';display:table; clear:both;}
+body{color:#333;}
+
+.container{ width: 1200px; margin:0 auto;}
+
+/* layout */
+header{background: #aaa; width: 100%; height: 100px;}
+.slide{height: 300px; width: 100%; background: #bbb;}
+.con{height: 200px; width: 100%; background: #ccc;}
+footer{height: 100px; width: 100%; background: #ddd;}

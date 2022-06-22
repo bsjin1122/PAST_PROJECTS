@@ -50,3 +50,16 @@ arTexts.push('hello','welcome','bye');
 
 console.log(arNumbers);
 console.log(arTexts);
+
+
+
+// 021 typeof
+const pi = 3.14;
+const name = 'greendev';
+console.log('hello : %s', typeof 'hello');
+console.log('"20" : %s', typeof '20');
+console.log('pi : %s', typeof pi);
+console.log('name : %s', typeof name);
+console.log('[]: %s', typeof []); //object
+console.log('{}: %s', typeof {}); //object
+

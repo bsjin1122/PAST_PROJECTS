@@ -103,3 +103,15 @@ console.log(Math.cbrt(-8)); //-2
 console.log(Math.cbrt(0)); //0
 console.log(Math.cbrt(1)); //1
 console.log(Math.cbrt(Infinity)); //Infinity
+
+// 061 부호 함수 sign()
+console.log(Math.sign(3)); //1
+console.log(Math.sign(-3)); //-1
+console.log(Math.sign('-3')); //-1 , 문자의 내용이 숫자이므로 값으로 인식하여 부호값을 판별
+console.log(0);//0
+console.log(NaN);//NaN 숫자가 아닌 값을 표현함
+console.log(Math.sign()); //값을 넣지 않는 경우도 판별할 수 없음
+
+
+
+

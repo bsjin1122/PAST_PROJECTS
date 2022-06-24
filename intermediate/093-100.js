@@ -53,3 +53,26 @@ const fibonacci = (num) => {
 for (let i = 0; i < 10; i+=1) {
     console.log(fibonacci(i));
 }
+
+
+
+
+// 099 재귀함수로 합계 구하기 
+const scores = [85, 95, 76];
+// 배열 요소들의 합을 구하는 예제
+const sum = (list, total, length) => {
+    if(length === list.length) return total;
+    return sum(list, total + list[length], length + 1);
+};
+console.log('sum: ', sum(scores,0,0)); //256
+
+
+
+
+// 100 재귀함수로 평균 구하기 
+const scores2 = [85, 95, 76];
+const average = (list, total, length) => {
+    if(length === list.length) return total / length;
+    return average(list, total + list[length], length + 1);
+};
+console.log('average: ', average(scores, 0,0));

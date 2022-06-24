@@ -194,3 +194,36 @@ exports.printHello = printHello;  //함수 자체를 넘기기 때문에 ()제�
 exports.printMessage = (message) => {
     console.log(message + '!!');
 }
+
+
+
+
+/* Promise 코딩앙마
+const pr = new Promise((resolve, reject)=> {
+    //code
+})*/
+console.log('---------------');
+const pr = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('OK');
+    }, 3000);
+})
+pr.then(
+    (result)=> {
+        console.log(result + ' 가지러 가자.');
+    }, //콤마 중요
+    (err) =>{
+        console.log('다시 주문해 주세요...');
+    }
+);
+/*
+pr. then(
+    (result) => {}
+).catch( //가독성에도 좋고, 에러 잡기에도 가능 
+    (err) => {}
+).finally(
+    () => {
+        console.log('---주문 끝---');
+    }
+)
+ */

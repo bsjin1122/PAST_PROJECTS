@@ -36,7 +36,7 @@ fs.access(path[, mode], callback) 은 다음과 같이 쓸 수 있다는 것을 
 const fs = require('fs');
 
 const contents = 'hello\nbye\n안녕';
-fs.writeFile('./123text1.txt', contents, 'utf8', function(error){
+fs.writeFile('./uses/123text1.txt', contents, 'utf8', function(error){
 	console.log('write end');
 }); //대부분의 함수가 파일이 없을 경우 에러를 발생시킴
 
@@ -44,7 +44,7 @@ fs.writeFile('./123text1.txt', contents, 'utf8', function(error){
 
 
 // 124 동기로 파일 열기 fs.readFileSync()
-const data = fs.readFileSync('./123text1.txt');
+const data = fs.readFileSync('./uses/123text1.txt');
 const string = data.toString();
 console.log('sync work01');
 console.log(string);
@@ -59,7 +59,7 @@ console.log(string);
 
 
 // 125 비동기로 파일 열기 fs.readFile()
-fs.readFile('./123text1.txt', (err, data)=> { 
+fs.readFile('./uses/123text1.txt', (err, data)=> { 
 //return 이 없기 때문에 다음 실행할 로직을 callback 함수를 이용해 넘겨주고, 바로 이어서 실행하는 구조
     if(err) throw err; //해당 경로에 파일이 없는 등의 이유인 경우 에러 발생 
     console.log('async work01');
@@ -88,7 +88,7 @@ fs.readFile('./123text1.txt', (err, data)=> {
 // 127 파일에 내용 추가하기 fs.appendFile()
 const list = [1, 2, 3, 4, 5];
 list.forEach(item => {
-    fs.appendFile('./127chapters.txt', `chapter ${item}\n`, (err)=> {
+    fs.appendFile('./uses/127chapters.txt', `chapter ${item}\n`, (err)=> {
         console.log(err);
     });
 });
@@ -128,6 +128,33 @@ const userList = [
     {name: 'jiji', age: 27}
 ];
 
-fs.writeFile('./130listJson', JSON.stringify(userList), (err)=> {
-    console.log(err);
+// fs.writeFile('./uses/130listJson.json', JSON.stringify(userList), (err)=> {
+//     console.log(err);
+// });
+
+
+
+
+
+// 131 파일을 json 형식으로 불러오기, JSON.parse()
+fs.readFile('./uses/130listJson.json', (err, data)=> {
+    if(err) throw err;
+    const json = JSON.parse(data.toString());
+    console.log('name: ', json[0].name);
+    console.log('name: ', json[1].name);
+    console.log('------131. the end!------');
 });
+
+
+
+
+// 132 파일 이름 바꾸기 
+const renameFile = (fromFilePathName, toFilePathName)=> {
+    fs.rename(fromFilePathName, toFilePathName, (err)=> {
+        if(err) console.log(`ERROR: ${err}`);
+    });
+};
+const fromFilePathName = './uses/123text1.txt';
+const toFilePathName = './uses/123-test.txt';
+
+renameFile(fromFilePathName, toFilePathName);

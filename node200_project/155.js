@@ -12,4 +12,4 @@ http.createServer((request, response)=> {
     });
 }).listen(50000, () => {
     console.log('서버가 동작 중입니다. http://127.0.0.1:50000');
-})
+});

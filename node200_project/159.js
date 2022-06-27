@@ -4,7 +4,6 @@ const winstonDaily = require('winston-daily-rotate-file');
 const { format } = require('logform');
 const { combine, timestamp, json, colorize, label, prettyPrint, simple, printf, align } = format;
 
-// 기본설정을 사용하면 로그레벨만 색상이 적용되어 출력되는 로그를 재정의하였다.
 // Define log format
 const logFormat = printf(({level, message, label, timestamp})=>{
   return `${timestamp} [${label}] ${level}: ${message}`; 

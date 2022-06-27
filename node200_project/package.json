@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "charset": "^1.0.1",
     "cheerio": "^1.0.0-rc.11",
     "ejs": "^3.1.8",
@@ -16,6 +17,7 @@
     "iconv-lite": "^0.6.3",
     "logform": "^2.4.1",
     "moment": "^2.29.3",
+    "morgan": "^1.10.0",
     "pug": "^3.0.2",
     "request": "^2.88.2",
     "winston": "^3.8.0",

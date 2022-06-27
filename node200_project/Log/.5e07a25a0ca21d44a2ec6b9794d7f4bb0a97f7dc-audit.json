@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "node200_project\\Log\\.5e07a25a0ca21d44a2ec6b9794d7f4bb0a97f7dc-audit.json",
+    "files": [
+        {
+            "date": 1656308243115,
+            "name": "node200_project\\Log\\logs.2022-06-27",
+            "hash": "1a4ee890bb92101bfb22ce6a2055397f1e7f207cc0126893c22a1d3056cc18ce"
+        }
+    ],
+    "hashType": "sha256"
+}

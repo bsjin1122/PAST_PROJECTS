@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 5
+    },
+    "auditLog": "node200_project\\Log\\.205bdce7a0e9d63259a5736b696cb2b62e193d95-audit.json",
+    "files": [
+        {
+            "date": 1656298044689,
+            "name": "node200_project\\Log\\exception.2022-06-27-11",
+            "hash": "451a2ca1e3ad2ac2cb09a8c79394e968203e4c6dfbab18e48b54e4978111cc0e"
+        },
+        {
+            "date": 1656299074977,
+            "name": "node200_project\\Log\\exception.2022-06-27-12",
+            "hash": "c3bd2bc0ac0ce46a363c592967c6c513cd28266a396ace7345a852db072be0df"
+        },
+        {
+            "date": 1656307077863,
+            "name": "node200_project\\Log\\exception.2022-06-27-14",
+            "hash": "0b9ffdfadea27fee3b99f3bc693cc9b302c263ec00103c1fd5af9f3cea5e6b57"
+        },
+        {
+            "date": 1656309694756,
+            "name": "node200_project\\Log\\exception.2022-06-27-15",
+            "hash": "75929bad49f07ebbec148a39dc977efbd98c13299f392fff83fce8a08a173500"
+        }
+    ],
+    "hashType": "sha256"
+}

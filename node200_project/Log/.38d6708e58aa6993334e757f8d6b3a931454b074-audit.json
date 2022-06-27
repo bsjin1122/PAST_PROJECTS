@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 5
+    },
+    "auditLog": "node200_project\\Log\\.38d6708e58aa6993334e757f8d6b3a931454b074-audit.json",
+    "files": [
+        {
+            "date": 1656299528391,
+            "name": "node200_project\\Log\\exception.2022-06-27-12",
+            "hash": "61a3e6c6467104400eb60894d2338548aa8ff01cabcef83492d3fad742f46c4c"
+        }
+    ],
+    "hashType": "sha256"
+}

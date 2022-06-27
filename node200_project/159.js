@@ -1,28 +1,48 @@
 const winston = require('winston');
 const winstonDaily = require('winston-daily-rotate-file');
-const moment = require('moment');
+// const moment = require('moment');
+const { format } = require('logform');
+const { combine, timestamp, json, colorize, label, prettyPrint, simple, printf, align } = format;
 
-const tsFormat = () => {
-    return moment().format('YYYY-MM-DD HH:mm:ss.SSS ZZ');
-}
+// 기본설정을 사용하면 로그레벨만 색상이 적용되어 출력되는 로그를 재정의하였다.
+// Define log format
+const logFormat = printf(({level, message, label, timestamp})=>{
+  return `${timestamp} [${label}] ${level}: ${message}`; 
+});
+
+const jsonWithTimestamp = combine(
+  json(),
+  colorize({all:true}),
+  label({label: 'label test!!'}),
+  simple(),
+  timestamp({ format: ' YYYY-MM-DD HH:MM:SS ||' }),
+  align(),
+  prettyPrint(),
+  logFormat
+);
+
 
 const logger = winston.createLogger({
-    transports: [
+  transports: [
       new winston.transports.Console({
-        timestamp: tsFormat,
         colorize: true,
         showlevel: true,
         level: 'debug',
+        handleExceptions: true,
+        zippedArchive: true,
+        format: jsonWithTimestamp,
+        prettyPrint: true
+
       }),
       new winstonDaily({ //매일 새로운 파일에 로그를 기록하도록 설정
-  
         level: 'info',
         filename: './node200_project/Log/logs',
-        timestamp: tsFormat,
-        datePattern: 'YYYY-MM-DD',
+        datePattern: 'YYYY-MM-DD-HH',
         showlevel: true,
         maxsize: 1000000, //로그 파일 크기가 10MB가 넘어가면 새로운 파일을 만듦
         maxFiles: 5, //최대 5개까지 가능
+        zippedArchive: true,
+        format: jsonWithTimestamp, 
       }),
   
     ],
@@ -30,64 +50,26 @@ const logger = winston.createLogger({
      new winstonDaily({
         level: 'info',
         filename: './node200_project/Log/exception',
-        timestamp: tsFormat,
-        datePattern: 'YYYY-MM-DD',
+        datePattern: 'YYYY-MM-DD-HH',
         showlevel: true,
         maxsize: 1000000,
         maxFiles: 5,
-  
+        zippedArchive: true,
+        format: jsonWithTimestamp,
+      
       }),
       new winston.transports.Console({
-        timestamp: tsFormat,
         colorize: true,
         showlevel: true,
         level: 'debug',
+        handleExceptions: true,
+        zippedArchive: true,
+        format: jsonWithTimestamp,
       }),
     ],
   });
+
+module.exports = logger;
   
-  logger.info('인포 로깅');
-  logger.error('에러 로깅');
-
-
-
-// const logger = winston.createLogger({
-//     transports: [
-//         new winston.transports.Console({
-//             timestamp: tsFormat, 
-//             colorize: true, 
-//             showlevel: true, 
-//             level: 'debug',            
-//         }),
-//         new winstonDaily({
-//             level:'info', 
-//             filename: './node200_project/Log/test.log', 
-//             timestamp: tsFormat,
-//             datePattern: '_yyyy-MM-dd.log',
-//             showlevel: true, 
-//             maxSize: 1000000, 
-//             maxFiles: 5,
-//         }), 
-//     ],
-//     exceptionHandlers: [
-//         winstonDaily({
-//             level:'info',
-//             filename:'./node200_project/Log/exception.log',
-//             timestamp:tsFormat, 
-//             datePattern: '_yyyy-MM-dd.log',
-//             showlevel: true, 
-//             maxSize: 1000000, 
-//             maxFiles:5,
-
-//         }),
-//         winston.transports.Console({
-//             timestamp: tsFormat, 
-//             colorize: true, 
-//             showlevel: true,
-//             level: 'debug',
-//         }),
-//     ],
-// }, (err)=> console.log(err));
-
-// logger.info('인포 로깅');
-// logger.error('에러 로깅');
+logger.info('인포 로깅');
+logger.error('에러 로깅');

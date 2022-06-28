@@ -12,16 +12,16 @@
 
         window.onload = () => {
             //Message 전달
-            document.getElementById('button').onclick = ()=> {
+            document.getElementById('button').onclick = () => {
                 const text = document.getElementById('text').value;
                 console.log('clientMsg -> Server');
-                socket.emit('clientMsg', text);
+                socket.emit('clientmsg', text);
             };
 
             //실시간 Interval 전달
             document.getElementById('status').onclick = () => {
                 console.log('Status event(Client)');
-                socket.emit('staus');
+                socket.emit('status');
             };
             
             //이벤트 연결
@@ -32,7 +32,7 @@
             });
         };
 
-        socket.on('msg', (data)=> {
+        socket.on('msg', function(data) {
             console.log(data);
         });
     </script>

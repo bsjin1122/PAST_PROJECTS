@@ -21,7 +21,7 @@ client.on('clientmsg', (data)=> {
 client.on('status', ()=> {
     console.log('Status event(Server)');
     setInterval(()=>{
-        client.emit('msg2', 'Hello socket.io');
+        client.emit('msg2', 'Hello socket.io'); //소켓 이벤트 발생 
     }, 3000);
   });
 });

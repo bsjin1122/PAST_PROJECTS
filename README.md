@@ -1,9 +1,8 @@
 # web-publishing
 
-<h4>😊학습 목적</h4>
+<h4>학습 목적</h4>
 <ul>
   <li>웹의 가장 기본인 html의 레이아웃 잡기, css 개념을 이해한 후 가장 기본적인 내용부터 응용해내는 것을 작은 목표로 하여 시작하였습니다.<br></li> 
 </ul><br/>
 
-> 아침 기상 직후 손풀기 용으로 조금씩 연습하였고, <br>
-> youtube의 webstoryboy님과 TV율희님의 영상을 보면서 도움을 받았습니다.🙌
+> youtube의 webstoryboy님의 영상을 통해 연습하였습니다.

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>가로유형03 self 연습</title>
+    <title>가로유형03 연습2</title>
 
     <style>
         /* reset */
@@ -14,20 +14,22 @@
         
         #wrap {width: 1200px; margin: 0px auto;}
         
-         /* header */
+        /* header */
         #header {position: relative; text-align: center; background: #7e57c2;}
         #header .logo {position: absolute; left: 0; top: 0; z-index: 10; width:250px; height:100px; line-height: 100px; background: #d1c4e9;}
         #header .nav {position: relative; float: right; width:100%; margin-top: 56px;}
-       
+
         #header .nav ul{padding-left: 40%;}
-        #header .nav ul li{position:relative;float:left; width: 25%; text-align: center;}
-        #header .nav ul li a{position:relative; display: block;padding: 10px;font-size: 20px; color:#fff; background: #b39ddb;}
+        #header .nav ul li {position:relative;float:left;width: 25%;text-align: center;}
+        #header .nav ul li a{position:relative; display: block; padding: 10px;font-size: 20px;color:#fff; background: #b39ddb;}
         #header .nav ul li a:hover{background: rgba(0,0,0,0.4);}
-        
-        #header .nav ul li ul.submenu {padding-left: 0; position:absolute; left: 0;top: 44px;background: #b39ddb;height: 190px;}
-        /* #header .nav ul li:first-child ul.submenu::after{content:''; position:absolute; left: -480px;top: 0;width: 480px;height: 190px; background: #b39ddb;} */
-        #header .nav ul li:first-child ul.submenu::after{content:''; position:absolute; left: -480px;top: 0;width: 480px;height: 190px;background: #b39ddb;}
+
+
+        #header .nav ul li ul.submenu{padding-left: 0; position:absolute; left: 0;top: 44px; background: #b39ddb;height: 190px;}
+        #header .nav ul li:first-child ul.submenu::after{content: ''; background: #b39ddb;position: absolute; width: 480px;height: 190px;left: -480px;top: 0; }
         #header .nav ul li ul.submenu li {width: 100%;}
+
+
 
 
 
@@ -112,20 +114,12 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(".nav > ul > li").mouseenter(function(){
+        $(".nav > ul > li").mouseover(function(){
             $(".nav > ul > li > ul").show();
         });
-        $(".nav > ul > li").mouseleave(function(){
+        $(".nav > ul > li").mouseout(function(){
             $(".nav > ul > li > ul").hide();
         });
-
-        // $(".nav > ul > li").mouseenter(function(){
-        //     $(".nav > ul > li > ul ").show();
-        // });
-        // $(".nav > ul > li").mouseleave(function(){
-        //     $(".nav > ul > li > ul ").hide();
-        // });
     </script>
 </body>
 </html>
-

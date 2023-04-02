@@ -1,13 +1,12 @@
-import React from 'react';
-import PropsComp from './PropsComp';
-import StateComp from './StateComp';
-
+import React, { Fragment } from 'react';
+import R040_ReactstrapCard from './../reactStrap/R040_ReactstrapCard';
+import R041_ReactstrapCarousel from './../reactStrap/R041_ReactstrapCarousel';
 const PropsApp = () => {
     
     return (
         <div>
             <h1>Start react 200!</h1>
-           {/* <StateComp reactString={"react"}></StateComp> */}
+            <R041_ReactstrapCarousel />
         </div>
     );
 };

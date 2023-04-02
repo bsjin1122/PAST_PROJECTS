@@ -1,5 +1,6 @@
-import './App.css';
 import PropsApp from './myComponent/PropsApp';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (

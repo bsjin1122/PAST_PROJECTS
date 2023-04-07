@@ -4,7 +4,7 @@ const StateComp = (props) => {
   
     return (
         <div>
-            
+            1
         </div>
     );
 };

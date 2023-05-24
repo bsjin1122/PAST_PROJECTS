@@ -1,4 +1,5 @@
 package com.mysite.sbb.question;
+import java.time.LocalDateTime;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,4 +25,12 @@ public class QuestionService {
             }
 
     }
+    public void create(String subject, String content) {
+        Question q = new Question();
+        q.setSubject(subject);
+        q.setContent(content);
+        q.setCreateDate(LocalDateTime.now());
+        this.questionRepository.save(q);
+    }
+
 }

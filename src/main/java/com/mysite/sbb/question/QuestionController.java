@@ -2,8 +2,10 @@ package com.mysite.sbb.question;
 
 import java.util.List;
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import lombok.RequiredArgsConstructor;
 
@@ -29,10 +31,19 @@ public class QuestionController {
         return "question_detail";
     }
 
+    @GetMapping("/create")
+    public String questionCreate() {
+        return "question_form"; // 질문 저장후 질문목록으로 이동
+    }
+    
     @PostMapping("/create")
-    public String questionCreate(@RequestParam String subject, @RequestParam String content) {
-        // TODO 질문을 저장한다.
-        return "redirect:/question/list"; // 질문 저장후 질문목록으로 이동
+    public String questionCreate(@Valid QuestionForm questionForm, BindingResult bindingResult){
+        // TODO: 질문을 저장한다.
+        if (bindingResult.hasErrors()) {
+            return "question_form";
+        }
+        this.questionService.create(questionForm.getSubject(), questionForm.getContent());
+        return "redirect:/question/list"; //질문 저장 후 질문 목록으로 이동
     }
 
 }

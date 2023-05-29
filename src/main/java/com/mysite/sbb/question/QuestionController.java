@@ -59,7 +59,7 @@ public class QuestionController {
     }
 
     @PreAuthorize("isAuthenticated()")
-    @GetMapping("modify/{id}")
+    @GetMapping("/modify/{id}")
     public String questionModify(QuestionForm questionForm, @PathVariable("id") Integer id, Principal principal){
         Question question = this.questionService.getQuestion(id);
         if(!question.getAuthor().getUsername().equals(principal.getName())){

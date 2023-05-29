@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.OneToMany;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -33,4 +34,8 @@ public class Question {
     @ManyToOne
     private SiteUser author;
 
+    private LocalDateTime modifyDate;
+
+    @ManyToMany
+    Set<SiteUser> voter;
 }

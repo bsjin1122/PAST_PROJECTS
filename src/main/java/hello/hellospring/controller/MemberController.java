@@ -19,6 +19,7 @@ public class MemberController {
     @Autowired // <- 스프링이 MemberService를 연결
     public MemberController(MemberService memberService) { //'hello.hellospring.service.MemberService' that could not be found.?
         this.memberService = memberService;
+        //System.out.println("memberService = " + memberService.getClass()); //MemberService$$SpringCGLIB$$0
     }
 
     @GetMapping("/members/new")

@@ -10,7 +10,7 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy;
 
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
+        this.memberRepository = memberRepository; // 어떤 것이 호출될지는 모름 -> 권한이 AppConfig가 프로그램에 대한 제어 흐름을 갖고 있음
         this.discountPolicy = discountPolicy;
     }
 

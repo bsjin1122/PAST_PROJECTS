@@ -17,6 +17,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration // 설정정보 담당한다는 뜻
 public class AppConfig {
+    // @Bean memberService -> new MemoryMemberRepository()
+    // @Bean orderService -> new MemoryMemberRepository()
+
 
     @Bean // 스프링 컨테이너에 등록된다.
     public MemberService memberService(){

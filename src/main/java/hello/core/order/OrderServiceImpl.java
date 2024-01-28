@@ -1,12 +1,16 @@
 package hello.core.order;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
+//@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
     // 2. setter 수정자 주입
     // final 필드에서제거 후에, set~~으로 메서드 정의하고, @Autowired 꼭 붙여준다!!!
@@ -18,6 +22,17 @@ public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository; // 값이 무조건 있어야 한다. 무조건 세팅해줘.
     private final DiscountPolicy discountPolicy;
 
+//    @Autowired
+//    private DiscountPolicy rateDiscountPolicy;
+
+    // 3. 일반 메서드 주입 , 필드에 final 제거
+    // 한 번에 여러 필드를 주입받을 수 있다. (일반적으로 잘 사용하지 않는다.)
+//    @Autowired
+//    public void init(MemberRepository memberRepository, DiscountPolicy
+//            discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
 
 //    @Autowired
@@ -39,12 +54,13 @@ public class OrderServiceImpl implements OrderService{
 
     // 중요! 생성자가 딱 1개만 있으면 @Autowired를 생략해도 자동 주입 된다.** 물론 스프링 빈에만 해당한다.
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        System.out.println("1. OrderServiceImpl.OrderServiceImpl");
+    // lombok 라이브러리 적용! -> getter, setter 임의로 만들어줌  파라미터에 @Qualifier("mainDiscountPolicy")
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
+        //System.out.println("1. OrderServiceImpl.OrderServiceImpl");
         // System.out.println("memberRepository = " + memberRepository);
-       // System.out.println("discountPolicy = " + discountPolicy);
+        // System.out.println("discountPolicy = " + discountPolicy);
         this.memberRepository = memberRepository; // 어떤 것이 호출될지는 모름 -> 권한이 AppConfig가 프로그램에 대한 제어 흐름을 갖고 있음
-        this.discountPolicy = discountPolicy;
+        this.discountPolicy = discountPolicy; //discountPolicy;
         // 생성자에서 들어오는 값들은 무조건 있다고 생각한다.
     }
 
@@ -65,4 +81,6 @@ public class OrderServiceImpl implements OrderService{
     public MemberRepository getMemberRepository(){
         return memberRepository;
     }
+
+
 }

@@ -42,8 +42,8 @@ public class AppConfig {
     public OrderService orderService() {
         //1번
         System.out.println("call AppConfig.orderService");
-        return null; // 필드 주입 방법 시도 시 오류나서 null로 대응
-        //return new OrderServiceImpl(memberRepository(), discountPolicy());
+//        return null;
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
     @Bean

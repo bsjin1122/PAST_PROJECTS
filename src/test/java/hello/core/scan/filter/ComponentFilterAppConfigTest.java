@@ -1,6 +1,5 @@
-package hello.core.scan.Filter;
+package hello.core.scan.filter;
 
-import org.junit.jupiter.api.Assertions.*;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;

@@ -1,8 +1,8 @@
 package hello.core;
 
 import hello.core.discount.DiscountPolicy;
-import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
+import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
@@ -15,25 +15,34 @@ import org.springframework.context.annotation.Configuration;
 // 장점: 메서드, 리턴타입만 봐도 역할이 다 드러남, return 코드만 바꾸면 됨!
 // 애플리케이션 전체 구성이 어떻게 되어있는지 빠르게 파악할 수 있다.
 
-@Configuration // 설정정보 담당한다는 뜻
+
+
+@Configuration // 설정정보 담당한다는 뜻, 없으면 싱글톤이 깨짐!
 public class AppConfig {
     // @Bean memberService -> new MemoryMemberRepository()
     // @Bean orderService -> new MemoryMemberRepository()
 
+    // call AppConfig.memberService
+    // call AppConfig.memberRepository
+    // call AppConfig.orderService
 
     @Bean // 스프링 컨테이너에 등록된다.
-    public MemberService memberService(){
-        return new MemberServiceImpl(memberRepository()); // 생성자 주입
+    public MemberService memberService() {
+        //1번
+        System.out.println("call AppConfig.memberService");
+        return new MemberServiceImpl(memberRepository());
     }
-
-    // 역할이 드러남.
     @Bean
-    public MemoryMemberRepository memberRepository() {
+    public MemberRepository memberRepository() {
+        //2번? 3번?
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
-
     @Bean
-    public OrderService orderService(){
+    public OrderService orderService() {
+        //1번
+        System.out.println("call AppConfig.orderService");
+//        return null;
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 

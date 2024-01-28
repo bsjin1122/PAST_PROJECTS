@@ -1,9 +1,13 @@
 package hello.core.member;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
 // 회원 저장소 구현
+@Component
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>(); //동시성 이슈가 있을 수 있으므로 new ConcurrentHashMap 를 쓰는 게 맞다

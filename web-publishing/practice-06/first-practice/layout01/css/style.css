@@ -1,0 +1,13 @@
+
+body{background:#c8e6c9 ;}
+#wrap{width: 1000px; height: 900px; margin: 0 auto; font-size: 40px; color:#fff; text-align: center; text-transform: uppercase;}
+#header{line-height:100px;width: 1000px;height: 100px; background: #2e7d32; }
+#nav{line-height: 100px; width: 1000px;height: 100px;background:#388e3c}
+#side{line-height: 600px;float:left;width: 300px;height: 600px; background: #43a047;}
+#contents{line-height: 600px; float:left; width: 700px;height: 600px; background: #4caf50;}
+#footer{line-height: 100px; float:left;width: 1000px; height: 100px; background: #66bb6a;}
+
+/* 글자들이 중앙에 오는 css 속성이 없어서
+    그대신 한 줄일 경우에 모든 div에 line-height를 적용해준다. 
+    글자 간 높이 설정
+*/

@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 5
+    },
+    "auditLog": "node200_project\\Log\\.704f1f21361a645d87aad470962e4794fd5bb1a1-audit.json",
+    "files": [
+        {
+            "date": 1656298044685,
+            "name": "node200_project\\Log\\logs.2022-06-27-11",
+            "hash": "f631176225f1bf0e7c93d5412ea8eb4baf541e054a8530d6230fcd7f10cd0f56"
+        },
+        {
+            "date": 1656299074971,
+            "name": "node200_project\\Log\\logs.2022-06-27-12",
+            "hash": "6365c2e3cedeabb1a5bf8c069075cbce4ff2d4e76717ec680b96a87e1f53a42c"
+        },
+        {
+            "date": 1656307077759,
+            "name": "node200_project\\Log\\logs.2022-06-27-14",
+            "hash": "9f1774af4bfb722a4bcab45fcde95c70589ce9fe44e5896949e149861c0a0faa"
+        },
+        {
+            "date": 1656309694751,
+            "name": "node200_project\\Log\\logs.2022-06-27-15",
+            "hash": "2467fe5bc15c5ba338ea8b01576187da8d44f6bba43e43dcbec71c9e8fb58450"
+        }
+    ],
+    "hashType": "sha256"
+}

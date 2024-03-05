@@ -1,0 +1,50 @@
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
+undefined
+undefined
+ㅎㅎㅎㅎ2022-06-27T06:28:29.970Z [32minfo[39m: 	[32m인포 로깅[39m
+ㅎㅎㅎㅎ2022-06-27T06:28:29.971Z [31merror[39m: 	[31m에러 로깅[39m
+[2022-06-27T06:33:04.195Z] [[32MINFO[39M] default: 	[32m인포 로깅[39m
+[2022-06-27T06:33:04.196Z] [[31MERROR[39M] default: 	[31m에러 로깅[39m
+2022-06-27T06:42:16.544Z [undefined] [32minfo[39m: 	[32m인포 로깅[39m
+2022-06-27T06:42:16.548Z [undefined] [31merror[39m: 	[31m에러 로깅[39m
+2022-06-27T06:43:31.404Z [label test!!] [32minfo[39m: 	[32m인포 로깅[39m
+2022-06-27T06:43:31.414Z [label test!!] [31merror[39m: 	[31m에러 로깅[39m
+ 2022-06-27 15:06:15 || [label test!!] [32minfo[39m: 	[32m인포 로깅[39m
+ 2022-06-27 15:06:16 || [label test!!] [31merror[39m: 	[31m에러 로깅[39m
+ 2022-06-27 15:06:14 || [label test!!] [32minfo[39m: 	[32m인포 로깅[39m
+ 2022-06-27 15:06:15 || [label test!!] [31merror[39m: 	[31m에러 로깅[39m

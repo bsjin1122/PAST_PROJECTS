@@ -1,0 +1,78 @@
+{"label":"right meow!","level":"\u001b[34minfo\u001b[39m","message":"인포 로깅","timestamp":"2022-06-27T05:17:57.980Z"}
+{"label":"right meow!","level":"\u001b[31merror\u001b[39m","message":"에러 로깅","timestamp":"2022-06-27T05:17:57.986Z"}
+{"label":"right meow!","level":"\u001b[32minfo\u001b[39m","message":"\u001b[32m인포 로깅\u001b[39m","timestamp":" 2022-06-27 14:06:48 ||"}
+{"label":"right meow!","level":"\u001b[31merror\u001b[39m","message":"\u001b[31m에러 로깅\u001b[39m","timestamp":" 2022-06-27 14:06:48 ||"}
+{"label":"right meow!","level":"\u001b[32minfo\u001b[39m","message":"\u001b[32m인포 로깅\u001b[39m","timestamp":" 2022-06-27 14:06:87 ||"}
+{"label":"right meow!","level":"\u001b[31merror\u001b[39m","message":"\u001b[31m에러 로깅\u001b[39m","timestamp":" 2022-06-27 14:06:87 ||"}
+{"label":"right meow!","level":"\u001b[32minfo\u001b[39m","message":"\u001b[32m인포 로깅\u001b[39m","timestamp":" 2022-06-27 14:06:08 ||"}
+{"label":"right meow!","level":"\u001b[31merror\u001b[39m","message":"\u001b[31m에러 로깅\u001b[39m","timestamp":" 2022-06-27 14:06:08 ||"}
+{"label":"right meow!","level":"\u001b[32minfo\u001b[39m","message":"\u001b[32m인포 로깅\u001b[39m","timestamp":"2022-06-27T05:46:07.228Z"}
+{"label":"right meow!","level":"\u001b[31merror\u001b[39m","message":"\u001b[31m에러 로깅\u001b[39m","timestamp":"2022-06-27T05:46:07.229Z"}
+2022-06-27T05:48:01.762Z [32minfo[39m: 	인포 로깅
+2022-06-27T05:48:01.763Z [31merror[39m: 	에러 로깅
+2022-06-27T05:48:49.481Z info: 	인포 로깅
+2022-06-27T05:48:49.482Z error: 	에러 로깅
+2022-06-27T05:48:58.481Z [32minfo[39m: 	[32m인포 로깅[39m
+2022-06-27T05:48:58.482Z [31merror[39m: 	[31m에러 로깅[39m
+2022-06-27T05:49:58.917Z [32minfo[39m: 	[32m인포 로깅[39m
+2022-06-27T05:49:58.918Z [31merror[39m: 	[31m에러 로깅[39m
+2022-06-27T05:50:22.608Z [34minfo[39m: 	인포 로깅
+2022-06-27T05:50:22.610Z [31merror[39m: 	에러 로깅
+2022-06-27T05:51:42.276Z [34minfo[39m: 	인포 로깅
+2022-06-27T05:51:42.277Z [31merror[39m: 	에러 로깅
+2022-06-27T05:52:01.275Z [34minfo[39m: 	인포 로깅
+2022-06-27T05:52:01.278Z [31merror[39m: 	에러 로깅
+2022-06-27T05:52:46.904Z [34minfo[39m: 	인포 로깅
+2022-06-27T05:52:46.906Z [31merror[39m: 	에러 로깅
+[object Object] 	인포 로깅
+[object Object] 	에러 로깅
+[object Object] 	인포 로깅
+[object Object] 	에러 로깅
+[object Object] 	인포 로깅
+[object Object] 	에러 로깅
+[object Object] 	인포 로깅
+[object Object] 	에러 로깅
+[object Object] 	인포 로깅
+[object Object] 	에러 로깅
+{
+  message: '\t인포 로깅',
+  level: 'info',
+  timestamp: '2022-06-27T05:56:18.213Z'
+}
+{
+  message: '\t에러 로깅',
+  level: 'error',
+  timestamp: '2022-06-27T05:56:18.214Z'
+}
+{
+  message: '\t인포 로깅',
+  level: 'info',
+  timestamp: '2022-06-27T05:56:49.755Z'
+}
+{
+  message: '\t에러 로깅',
+  level: 'error',
+  timestamp: '2022-06-27T05:56:49.757Z'
+}
+{
+  message: '\t인포 로깅',
+  level: 'info',
+  timestamp: '2022-06-27T05:57:23.034Z'
+}
+{
+  message: '\t에러 로깅',
+  level: 'error',
+  timestamp: '2022-06-27T05:57:23.035Z'
+}
+{
+  message: '\t인포 로깅',
+  level: 'info',
+  timestamp: '2022-06-27T05:57:44.320Z'
+}
+{
+  message: '\t에러 로깅',
+  level: 'error',
+  timestamp: '2022-06-27T05:57:44.321Z'
+}
+[object Object] 	[32m인포 로깅[39m
+[object Object] 	[31m에러 로깅[39m
